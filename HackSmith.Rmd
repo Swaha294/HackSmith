@@ -1,6 +1,6 @@
 ---
 title: "HackSmith"
-author: "Swaha Bhattacharya"
+author: "Swaha Bhattacharya & Lika Mikhelashvili"
 date: "27/03/2021"
 output: html_document
 editor_options: 
@@ -11,8 +11,6 @@ editor_options:
 library(tidyverse)
 library(plotly)
 ```
-
-
 
 ```{r}
 data(mpg)
@@ -32,8 +30,8 @@ mpg%>%
     hoverinfo = "text",
     type = 'scatter',
     mode = 'markers'
-    )#%>%
-  #layout(title = "drv VS cyl")
+    )%>%
+  layout(title = "Relation between Highway and City Miles per Gallon and Cylinder Size")
 ```
 
 
