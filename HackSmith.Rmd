@@ -1,0 +1,17 @@
+---
+title: "HackSmith"
+author: "Swaha Bhattacharya"
+date: "27/03/2021"
+output: html_document
+---
+
+```{r, message=FALSE}
+library(tidyverse)
+```
+
+
+
+```{r}
+data(mpg)
+```
+
