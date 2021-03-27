@@ -3,10 +3,13 @@ title: "HackSmith"
 author: "Swaha Bhattacharya"
 date: "27/03/2021"
 output: html_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r, message=FALSE}
 library(tidyverse)
+library(plotly)
 ```
 
 
@@ -14,4 +17,30 @@ library(tidyverse)
 ```{r}
 data(mpg)
 ```
+
+
+```{r}
+mpg%>%
+  plot_ly(
+    x = ~hwy,
+    y = ~cty,
+    #ids = ~car_id,
+    color = ~manufacturer,
+    frame = ~factor(year),
+    size = ~cyl,
+    text = ~paste("Class:", class, "\nModel:", model, "\nCylinder:", cyl),
+    hoverinfo = "text",
+    type = 'scatter',
+    mode = 'markers'
+    )#%>%
+  #layout(title = "drv VS cyl")
+```
+
+
+
+
+
+
+
+
 
